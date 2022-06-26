@@ -1,5 +1,7 @@
 const inquirer = require('inquirer')
 const Manager = require('./lib/manager')
+const Engineer = require('./lib/engineer')
+const Intern = require('./lib/intern')
 const fs = require('fs')
 const renderTeam = require('./src/html-templates')
 
@@ -32,8 +34,8 @@ const init = () => {
             ])
             .then(answers => {
                 const manager = new Manager(
-                    answers.id,
                     answers.name,
+                    answers.id,
                     answers.email,
                     answers.officenumber,
                 )
@@ -67,8 +69,8 @@ const init = () => {
             ])
             .then(answers => {
                 const engineer = new Engineer(
-                    answers.id,
                     answers.name,
+                    answers.id,
                     answers.email,
                     answers.github,
                 )
@@ -102,8 +104,8 @@ const init = () => {
             ])
             .then(answers => {
                 const engineer = new Engineer(
-                    answers.id,
                     answers.name,
+                    answers.id,
                     answers.email,
                     answers.github,
                 )
