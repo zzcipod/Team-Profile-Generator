@@ -37,7 +37,7 @@ const init = () => {
                     answers.name,
                     answers.id,
                     answers.email,
-                    answers.officenumber,
+                    answers.officeNumber,
                 )
                 teamMemberObjArray.push(manager);
                 addEmployees();
@@ -64,7 +64,7 @@ const init = () => {
                 {
                     type: 'input',
                     message: 'What is the engineers github?',
-                    name: 'officeNumber'
+                    name: 'github'
                 },
             ])
             .then(answers => {
@@ -83,33 +83,33 @@ const init = () => {
             .prompt([
                 {
                     type: 'input',
-                    message: 'What is the engineers name?',
+                    message: 'What is the interns name?',
                     name: 'name'
                 },
                 {
                     type: 'input',
-                    message: 'What is the engineers id?',
+                    message: 'What is the interns id?',
                     name: 'id'
                 },
                 {
                     type: 'input',
-                    message: 'What is the engineers email?',
+                    message: 'What is the interns email?',
                     name: 'email'
                 },
                 {
                     type: 'input',
-                    message: 'What is the engineers github?',
-                    name: 'officeNumber'
+                    message: 'What is the interns school?',
+                    name: 'school'
                 },
             ])
             .then(answers => {
-                const engineer = new Engineer(
+                const intern = new Intern(
                     answers.name,
                     answers.id,
                     answers.email,
-                    answers.github,
+                    answers.school,
                 )
-                teamMemberObjArray.push(engineer);
+                teamMemberObjArray.push(intern);
                 addEmployees();
             })
     }
@@ -141,9 +141,14 @@ const init = () => {
     }
 
 
-
     function buildTeam() {
-        fs.writeFile('./dist/index.html', renderTeam(teamMemberObjArray))
+        fs.writeFile("./dist/index.html", renderTeam(teamMemberObjArray), (err) => {
+            if (err)
+                console.log(err);
+            else {
+                console.log("You successfully added your team members!");
+            }
+        })
     }
 
 
