@@ -13,22 +13,22 @@ const init = () => {
             .prompt([
                 {
                     type: 'input',
-                    message: 'What is the managers name?',
+                    message: 'Please input the managers name.',
                     name: 'name'
                 },
                 {
                     type: 'input',
-                    message: 'What is the managers id?',
+                    message: 'Please input the managers id.',
                     name: 'id'
                 },
                 {
                     type: 'input',
-                    message: 'What is the managers email?',
+                    message: 'Please input the managers email.',
                     name: 'email'
                 },
                 {
                     type: 'input',
-                    message: 'What is the managers office number?',
+                    message: 'Please input the managers office number.',
                     name: 'officeNumber'
                 },
             ])
@@ -48,22 +48,22 @@ const init = () => {
             .prompt([
                 {
                     type: 'input',
-                    message: 'What is the engineers name?',
+                    message: 'Please input the engineers name.',
                     name: 'name'
                 },
                 {
                     type: 'input',
-                    message: 'What is the engineers id?',
+                    message: 'Please input the engineers id.',
                     name: 'id'
                 },
                 {
                     type: 'input',
-                    message: 'What is the engineers email?',
+                    message: 'Please input the engineers email.',
                     name: 'email'
                 },
                 {
                     type: 'input',
-                    message: 'What is the engineers github?',
+                    message: 'Please input the engineers github.',
                     name: 'github'
                 },
             ])
@@ -83,22 +83,22 @@ const init = () => {
             .prompt([
                 {
                     type: 'input',
-                    message: 'What is the interns name?',
+                    message: 'Please input the interns name.',
                     name: 'name'
                 },
                 {
                     type: 'input',
-                    message: 'What is the interns id?',
+                    message: 'Please input the interns id.',
                     name: 'id'
                 },
                 {
                     type: 'input',
-                    message: 'What is the interns email?',
+                    message: 'Please input the interns email.',
                     name: 'email'
                 },
                 {
                     type: 'input',
-                    message: 'What is the interns school?',
+                    message: 'Please input the interns school.',
                     name: 'school'
                 },
             ])
